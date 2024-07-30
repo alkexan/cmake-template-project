@@ -1,0 +1,29 @@
+{
+    "version": 8,
+    "cmakeMinimumRequired": {
+        "major": 3,
+        "minor": 23,
+        "patch": 0
+    },
+    "configurePresets": [
+        {
+            "name": "Default",
+            "displayName": "Default build",
+            "description": "Default build using Ninja generator",
+            "generator": "Ninja",
+            "binaryDir": "${sourceDir}/build",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Debug",
+                "CMAKE_INSTALL_PREFIX": "${sourceDir}/install/${presetName}",
+                "FOR_EXAMPLE": "TRUE",
+                "GENERATE_DOC": "FALSE"
+            }
+        }
+    ],
+    "buildPresets": [
+        {
+            "name": "default",
+            "configurePreset": "default"
+        }
+    ]
+}
